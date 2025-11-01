@@ -59,11 +59,19 @@ export function Experience() {
             return (
               <Card
                 key={index}
-                className="p-8 backdrop-blur-sm bg-card/50 border-primary/20 hover:border-primary/50 transition-all group hover:shadow-2xl hover:shadow-primary/10"
+                className="p-8 backdrop-blur-sm bg-card/50 border-primary/30 hover:border-primary/60 transition-all duration-500 group
+                  shadow-[0_8px_30px_rgb(0,0,0,0.12),0_4px_16px_rgb(147,51,234,0.2)] 
+                  hover:shadow-[0_20px_60px_rgb(0,0,0,0.3),0_8px_30px_rgb(147,51,234,0.4),0_0_0_1px_rgb(147,51,234,0.3)]
+                  hover:-translate-y-2 hover:scale-[1.02]
+                  relative overflow-hidden
+                  before:absolute before:inset-0 before:rounded-lg before:p-[2px] before:bg-gradient-to-br before:from-primary/40 before:via-secondary/30 before:to-accent/40 before:-z-10 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`p-3 rounded-lg bg-${exp.color}/10 group-hover:animate-glow`}>
-                    <IconComponent className={`w-6 h-6 text-${exp.color}`} />
+                  <div className={`p-3 rounded-lg bg-${exp.color}/10 group-hover:bg-${exp.color}/20 
+                    transition-all duration-500 group-hover:scale-110 group-hover:rotate-3
+                    shadow-[0_4px_12px_rgba(0,0,0,0.15)] group-hover:shadow-[0_8px_24px_rgba(147,51,234,0.4)]
+                    border border-${exp.color}/20 group-hover:border-${exp.color}/40`}>
+                    <IconComponent className={`w-6 h-6 text-${exp.color} transition-all duration-500 group-hover:scale-110`} />
                   </div>
                   <div className="flex-1 space-y-4">
                     <div>
