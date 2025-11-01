@@ -1,0 +1,55 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#16213e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Poll Cards -->
+  <rect x="50" y="60" width="340" height="280" rx="15" fill="#0f3460" opacity="0.8"/>
+  <rect x="410" y="60" width="340" height="280" rx="15" fill="#0f3460" opacity="0.8"/>
+  
+  <!-- Left Card - Bar Chart -->
+  <text x="220" y="95" font-family="Arial, sans-serif" font-size="18" fill="#e94560" text-anchor="middle" font-weight="bold">Poll Results</text>
+  
+  <!-- Bars -->
+  <rect x="80" y="120" width="240" height="30" rx="5" fill="#533483" opacity="0.6"/>
+  <rect x="80" y="120" width="180" height="30" rx="5" fill="#7b2cbf"/>
+  <text x="90" y="142" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Option A - 60%</text>
+  
+  <rect x="80" y="165" width="240" height="30" rx="5" fill="#533483" opacity="0.6"/>
+  <rect x="80" y="165" width="120" height="30" rx="5" fill="#9d4edd"/>
+  <text x="90" y="187" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Option B - 40%</text>
+  
+  <rect x="80" y="210" width="240" height="30" rx="5" fill="#533483" opacity="0.6"/>
+  <rect x="80" y="210" width="90" height="30" rx="5" fill="#c77dff"/>
+  <text x="90" y="232" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Option C - 30%</text>
+  
+  <rect x="80" y="255" width="240" height="30" rx="5" fill="#533483" opacity="0.6"/>
+  <rect x="80" y="255" width="60" height="30" rx="5" fill="#e0aaff"/>
+  <text x="90" y="277" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Option D - 20%</text>
+  
+  <!-- Right Card - Pie Chart representation -->
+  <text x="580" y="95" font-family="Arial, sans-serif" font-size="18" fill="#e94560" text-anchor="middle" font-weight="bold">Vote Distribution</text>
+  
+  <!-- Pie Chart (simplified) -->
+  <circle cx="580" cy="200" r="80" fill="#533483" opacity="0.6"/>
+  <path d="M 580 120 A 80 80 0 0 1 660 200 L 580 200 Z" fill="#7b2cbf"/>
+  <path d="M 660 200 A 80 80 0 0 1 580 280 L 580 200 Z" fill="#9d4edd"/>
+  <path d="M 580 280 A 80 80 0 0 1 500 200 L 580 200 Z" fill="#c77dff"/>
+  <path d="M 500 200 A 80 80 0 0 1 580 120 L 580 200 Z" fill="#e0aaff"/>
+  
+  <!-- Stats -->
+  <text x="50" y="370" font-family="Arial, sans-serif" font-size="16" fill="#9d9d9d">Total Votes: 1,234</text>
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="16" fill="#9d9d9d">Active Polls: 42</text>
+  
+  <!-- Icons -->
+  <circle cx="700" cy="30" r="8" fill="#e94560"/>
+  <circle cx="730" cy="30" r="8" fill="#7b2cbf"/>
+  <circle cx="760" cy="30" r="8" fill="#9d4edd"/>
+</svg>

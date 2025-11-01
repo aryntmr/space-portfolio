@@ -24,8 +24,7 @@ export function Hero() {
         </div>
 
        <p className="text-xl md:text-2xl font-bold text-gray-400 max-w-3xl mx-auto leading-relaxed tracking-wide transition-colors duration-700 ease-in-out hover:text-white">
-          Building intelligent, full-stack systems that merge functionality with intelligence. From crafting robust APIs
-          to designing ML pipelines, I engineer products that make data useful, scalable, and impactful.
+          I'm a Software Engineer and NYU Master's student who builds web applications, data pipelines, and machine learning systems. I work across the full stack, focused on making software fast and reliable.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -95,9 +94,6 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-primary/60" />
-        </div>
       </div>
     </section>
   )

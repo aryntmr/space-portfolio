@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon } from "lucide-react"
+import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon, BarChart3, Users } from "lucide-react"
 
 const sdeProjects = [
   {
@@ -23,6 +23,26 @@ const sdeProjects = [
     gradient: "from-secondary to-accent",
     icon: Network,
     image: "/distributed-network-nodes-with-encrypted-file-tran.jpg",
+  },
+  {
+    title: "MERN Voting App",
+    description:
+      "A full-stack MERN voting application where users can create, share, and vote on polls. Features authentication, real-time results visualization with charts, and the ability to add custom poll options.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Chart.js"],
+    github: "https://github.com/aryntmr/mern-voting-app",
+    gradient: "from-accent to-primary",
+    icon: BarChart3,
+    image: "/voting-app-preview.svg",
+  },
+  {
+    title: "Discord Clone",
+    description:
+      "A Discord clone built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management. Features real-time chat functionality, user authentication via Firebase, and a modern Discord-inspired UI.",
+    tech: ["MongoDB", "Express.js", "React", "Redux Toolkit", "Socket.io", "Node.js"],
+    github: "https://github.com/aryntmr/discord-clone",
+    gradient: "from-primary via-accent to-secondary",
+    icon: Users,
+    image: "/discord-clone-preview.svg",
   },
 ]
 
@@ -87,16 +107,6 @@ const mlProjects = [
     icon: Target,
     image: "/bayesian-optimization-hyperparameter-search-visual.jpg",
   },
-  {
-    title: "Image Captioning System",
-    description:
-      "Built image captioning model using XceptionNet for feature extraction and LSTM for text generation. Achieved BLEU-4 score of 34.6 on MSCOCO dataset and improved it to 37.3 with Faster RCNN.",
-    tech: ["TensorFlow", "Keras", "XceptionNet", "LSTM", "Faster RCNN"],
-    github: "https://github.com/aryntmr/Image-Captioning-System",
-    gradient: "from-primary via-secondary to-accent",
-    icon: ImageIcon,
-    image: "/image-captioning-ai-generating-text-from-photos.jpg",
-  },
 ]
 
 export function Projects() {
@@ -115,48 +125,51 @@ export function Projects() {
             {sdeProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
-                <Card
+                <a
                   key={index}
-                  className="group overflow-hidden backdrop-blur-sm bg-card/50 border-primary/20 hover:border-primary/50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                    />
-                    <div className="absolute top-4 right-4 p-2 rounded-lg bg-background/80 backdrop-blur-sm">
-                      <IconComponent className="w-6 h-6 text-primary" />
+                  <Card className="group overflow-hidden backdrop-blur-sm bg-card/50 border-primary/20 hover:border-primary/50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 cursor-pointer h-full">
+                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+                      <img
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute top-4 right-4 p-2 rounded-lg bg-background/80 backdrop-blur-sm">
+                        <IconComponent className="w-6 h-6 text-primary" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-8 space-y-4">
-                    <h3
-                      className={`text-2xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}
-                    >
-                      {project.title}
-                    </h3>
-                    <div className="border-l-2 border-primary/30 pl-4 py-1">
-                      <p className="text-base text-foreground/95 leading-[1.8] font-medium tracking-wide font-[family-name:var(--font-crimson)] [text-shadow:0_1px_2px_rgba(0,0,0,0.3),0_0_8px_rgba(147,51,234,0.15)]">
-                        {project.description}
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, i) => (
-                        <Badge key={i} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-3 pt-4">
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <div className="p-8 space-y-4">
+                      <h3
+                        className={`text-2xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}
+                      >
+                        {project.title}
+                      </h3>
+                      <div className="border-l-2 border-primary/30 pl-4 py-1">
+                        <p className="text-base text-foreground/95 leading-[1.8] font-medium tracking-wide font-[family-name:var(--font-crimson)] [text-shadow:0_1px_2px_rgba(0,0,0,0.3),0_0_8px_rgba(147,51,234,0.15)]">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, i) => (
+                          <Badge key={i} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex gap-3 pt-4">
+                        <div className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-9 px-3">
                           <Github className="w-4 h-4 mr-2" />
                           Code
-                        </a>
-                      </Button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </a>
               )
             })}
           </div>
@@ -174,57 +187,60 @@ export function Projects() {
             {mlProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
-                <Card
+                <a
                   key={index}
-                  className="group overflow-hidden backdrop-blur-sm bg-card/50 border-accent/20 hover:border-accent/50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-accent/20"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="relative h-40 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
-                    />
-                    <div className="absolute top-3 right-3 p-2 rounded-lg bg-background/80 backdrop-blur-sm">
-                      <IconComponent className="w-5 h-5 text-accent" />
+                  <Card className="group overflow-hidden backdrop-blur-sm bg-card/50 border-accent/20 hover:border-accent/50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 cursor-pointer h-full">
+                    <div className="relative h-40 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10">
+                      <img
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                      />
+                      <div className="absolute top-3 right-3 p-2 rounded-lg bg-background/80 backdrop-blur-sm">
+                        <IconComponent className="w-5 h-5 text-accent" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <h3
-                      className={`text-xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}
-                    >
-                      {project.title}
-                    </h3>
-                    <div className="border-l-2 border-accent/30 pl-3 py-0.5">
-                      <p className="text-sm text-foreground/95 leading-[1.75] font-medium tracking-wide font-[family-name:var(--font-crimson)] [text-shadow:0_1px_2px_rgba(0,0,0,0.3),0_0_8px_rgba(147,51,234,0.15)]">
-                        {project.description}
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.slice(0, 3).map((tech, i) => (
-                        <Badge
-                          key={i}
-                          variant="secondary"
-                          className="bg-accent/10 text-accent border-accent/20 text-xs"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.tech.length > 3 && (
-                        <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20 text-xs">
-                          +{project.tech.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    <div className="pt-2">
-                      <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <div className="p-6 space-y-4">
+                      <h3
+                        className={`text-xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}
+                      >
+                        {project.title}
+                      </h3>
+                      <div className="border-l-2 border-accent/30 pl-3 py-0.5">
+                        <p className="text-sm text-foreground/95 leading-[1.75] font-medium tracking-wide font-[family-name:var(--font-crimson)] [text-shadow:0_1px_2px_rgba(0,0,0,0.3),0_0_8px_rgba(147,51,234,0.15)]">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.slice(0, 3).map((tech, i) => (
+                          <Badge
+                            key={i}
+                            variant="secondary"
+                            className="bg-accent/10 text-accent border-accent/20 text-xs"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                        {project.tech.length > 3 && (
+                          <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20 text-xs">
+                            +{project.tech.length - 3}
+                          </Badge>
+                        )}
+                      </div>
+                      <div className="pt-2">
+                        <div className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-transparent hover:bg-accent hover:text-accent-foreground h-9 px-3 w-full">
                           <Github className="w-4 h-4 mr-2" />
                           View Project
-                        </a>
-                      </Button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </a>
               )
             })}
           </div>

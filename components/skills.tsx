@@ -4,12 +4,27 @@ import { Badge } from "@/components/ui/badge"
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "C++", "C", "JavaScript", "TypeScript", "Go", "Rust", "C#"],
+    skills: ["TypeScript", "JavaScript", "Python", "Java", "C++", "Go"],
     color: "primary",
   },
   {
-    title: "Full-Stack Development",
-    skills: ["React", "Next.js", "Node.js", "Express.js", "FastAPI", "Spring Boot", "MongoDB", "PostgreSQL", "Redis"],
+    title: "Frontend Development",
+    skills: ["React.js", "Next.js", "Angular", "Redux", "Tailwind CSS"],
+    color: "secondary",
+  },
+  {
+    title: "Backend & API",
+    skills: ["Node.js", "Express.js", "REST", "FastAPI", "GraphQL", "Prisma", "JWT", "OAuth", "Microservices"],
+    color: "accent",
+  },
+  {
+    title: "Databases & Caching",
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB"],
+    color: "primary",
+  },
+  {
+    title: "DevOps & Cloud",
+    skills: ["AWS", "Docker", "Kubernetes", "Terraform", "Heroku", "CI/CD", "GitHub Actions", "Jenkins", "Git", "Linux", "Vercel"],
     color: "secondary",
   },
   {
@@ -18,24 +33,16 @@ const skillCategories = [
       "PyTorch",
       "TensorFlow",
       "Keras",
-      "OpenAI API",
+      "MLFlow",
+      "Ray",
       "LangChain",
       "LangGraph",
       "TensorRT",
+      "OpenAI API",
       "Computer Vision",
       "NLP",
     ],
     color: "accent",
-  },
-  {
-    title: "DevOps & Cloud",
-    skills: ["Docker", "Kubernetes", "AWS", "GCP", "Azure", "Terraform", "GitHub Actions", "Prometheus", "Grafana"],
-    color: "primary",
-  },
-  {
-    title: "MLOps",
-    skills: ["MLFlow", "Ray", "MinIO", "Model Deployment", "Experiment Tracking", "Cloud Training Pipelines"],
-    color: "secondary",
   },
 ]
 
