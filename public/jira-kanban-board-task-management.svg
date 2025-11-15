@@ -1,0 +1,66 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Main Board -->
+  <rect x="40" y="50" width="720" height="300" rx="12" fill="#2b2d42" opacity="0.9"/>
+  
+  <!-- Header -->
+  <text x="400" y="85" font-family="Arial" font-size="20" fill="#8d99ae" text-anchor="middle" font-weight="bold">Project Management Board</text>
+  
+  <!-- Column 1: To Do -->
+  <rect x="60" y="110" width="160" height="220" rx="8" fill="#3d405b"/>
+  <text x="140" y="135" font-family="Arial" font-size="14" fill="#e63946" text-anchor="middle" font-weight="bold">To Do</text>
+  
+  <rect x="70" y="150" width="140" height="60" rx="5" fill="#4a4e69"/>
+  <text x="80" y="168" font-family="Arial" font-size="11" fill="#ffffff">Setup Database</text>
+  <text x="80" y="183" font-family="Arial" font-size="9" fill="#b9bbbe">PostgreSQL + Prisma</text>
+  <circle cx="80" cy="195" r="4" fill="#5865f2"/>
+  
+  <rect x="70" y="220" width="140" height="60" rx="5" fill="#4a4e69"/>
+  <text x="80" y="238" font-family="Arial" font-size="11" fill="#ffffff">User Auth</text>
+  <text x="80" y="253" font-family="Arial" font-size="9" fill="#b9bbbe">Implement Clerk</text>
+  <circle cx="80" cy="265" r="4" fill="#faa61a"/>
+  
+  <!-- Column 2: In Progress -->
+  <rect x="240" y="110" width="160" height="220" rx="8" fill="#3d405b"/>
+  <text x="320" y="135" font-family="Arial" font-size="14" fill="#ffd60a" text-anchor="middle" font-weight="bold">In Progress</text>
+  
+  <rect x="250" y="150" width="140" height="60" rx="5" fill="#4a4e69"/>
+  <text x="260" y="168" font-family="Arial" font-size="11" fill="#ffffff">Kanban Board</text>
+  <text x="260" y="183" font-family="Arial" font-size="9" fill="#b9bbbe">Drag and Drop UI</text>
+  <circle cx="260" cy="195" r="4" fill="#7b2cbf"/>
+  
+  <rect x="250" y="220" width="140" height="60" rx="5" fill="#4a4e69"/>
+  <text x="260" y="238" font-family="Arial" font-size="11" fill="#ffffff">Task Management</text>
+  <text x="260" y="253" font-family="Arial" font-size="9" fill="#b9bbbe">CRUD operations</text>
+  <circle cx="260" cy="265" r="4" fill="#9d4edd"/>
+  
+  <!-- Column 3: Review -->
+  <rect x="420" y="110" width="160" height="220" rx="8" fill="#3d405b"/>
+  <text x="500" y="135" font-family="Arial" font-size="14" fill="#f4a261" text-anchor="middle" font-weight="bold">Review</text>
+  
+  <rect x="430" y="150" width="140" height="60" rx="5" fill="#4a4e69"/>
+  <text x="440" y="168" font-family="Arial" font-size="11" fill="#ffffff">API Routes</text>
+  <text x="440" y="183" font-family="Arial" font-size="9" fill="#b9bbbe">REST endpoints</text>
+  <circle cx="440" cy="195" r="4" fill="#e94560"/>
+  
+  <!-- Column 4: Done -->
+  <rect x="600" y="110" width="140" height="220" rx="8" fill="#3d405b"/>
+  <text x="670" y="135" font-family="Arial" font-size="14" fill="#06ffa5" text-anchor="middle" font-weight="bold">Done</text>
+  
+  <rect x="610" y="150" width="120" height="55" rx="5" fill="#4a4e69" opacity="0.7"/>
+  <text x="620" y="168" font-family="Arial" font-size="10" fill="#b9bbbe">Project Setup</text>
+  <text x="620" y="183" font-family="Arial" font-size="8" fill="#72767d">Next.js initialized</text>
+  <circle cx="620" cy="193" r="3" fill="#43b581"/>
+  
+  <rect x="610" y="215" width="120" height="55" rx="5" fill="#4a4e69" opacity="0.7"/>
+  <text x="620" y="233" font-family="Arial" font-size="10" fill="#b9bbbe">Database Schema</text>
+  <text x="620" y="248" font-family="Arial" font-size="8" fill="#72767d">Models created</text>
+  <circle cx="620" cy="258" r="3" fill="#43b581"/>
+  
+  <!-- Footer -->
+  <text x="60" y="375" font-family="Arial" font-size="12" fill="#8e9297">Next.js + PostgreSQL</text>
+  <text x="400" y="375" font-family="Arial" font-size="12" fill="#8e9297" text-anchor="middle">4 Workflow Stages</text>
+  <text x="720" y="375" font-family="Arial" font-size="11" fill="#43b581" text-anchor="end">Prisma ORM</text>
+</svg>
