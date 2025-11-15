@@ -1,18 +1,38 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon, BarChart3, Users } from "lucide-react"
+import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon, BarChart3, Users, Briefcase, Kanban } from "lucide-react"
 
 const sdeProjects = [
   {
-    title: "Real-Time Collaborative Code Editor",
+    title: "CareerCoachAI",
     description:
-      "Full-stack real-time code editor supporting multi-user live editing via WebSockets. Designed backend with Node.js and Express.js to manage room-based sessions and broadcast synchronization.",
-    tech: ["React", "Node.js", "Express.js", "Socket.io", "CodeMirror"],
-    github: "https://github.com/aryntmr/collaborative-code-editor",
+      "Full-stack career development platform with AI-powered resume analysis, interview simulation, and email generation. Built with Next.js, PostgreSQL, and dual AI APIs. Features tier-based authentication, job queue processing, and containerized AWS deployment.",
+    tech: ["Next.js", "PostgreSQL", "OpenAI", "AWS", "Docker", "Redis"],
+    github: "https://github.com/aryntmr/CareerCoachAI",
     gradient: "from-primary to-secondary",
+    icon: Briefcase,
+    image: "/career-coach-ai-preview.svg",
+  },
+  {
+    title: "CodeStreamAI",
+    description:
+      "Real-time collaborative code editor supporting 10+ languages with live cursor tracking and instant synchronization. Features WebSocket-based multi-user sessions, AI-powered code completion via GPT-4, and simultaneous code execution for seamless remote team collaboration.",
+    tech: ["React", "Node.js", "Express.js", "Socket.io", "GPT-4", "CodeMirror"],
+    github: "https://github.com/aryntmr/collaborative-code-editor",
+    gradient: "from-secondary to-accent",
     icon: Code2,
     image: "/collaborative-code-editor-with-multiple-cursors-an.jpg",
+  },
+  {
+    title: "Project Management Application (JIRA)",
+    description:
+      "Project management application with drag-and-drop Kanban board enabling real-time task tracking across four workflow stages. Built with Next.js and PostgreSQL, featuring Clerk authentication, Prisma ORM integration, and relational database design with automated cascading deletes.",
+    tech: ["Next.js", "PostgreSQL", "Prisma", "Clerk", "TypeScript"],
+    github: "https://github.com/aryntmr/jira-clone",
+    gradient: "from-accent to-primary",
+    icon: Kanban,
+    image: "/jira-clone-preview.svg",
   },
   {
     title: "Distributed File Storage System",
@@ -20,7 +40,7 @@ const sdeProjects = [
       "Peer-to-peer encrypted file storage system with AES encryption and SHA-1 content addressing over TCP. Achieved secure and efficient multi-peer broadcasting and concurrent TCP connection management.",
     tech: ["Go", "Networking", "Cryptography", "TCP", "Concurrent Systems"],
     github: "https://github.com/aryntmr/distributed-file-storage-v1",
-    gradient: "from-secondary to-accent",
+    gradient: "from-primary to-secondary",
     icon: Network,
     image: "/distributed-network-nodes-with-encrypted-file-tran.jpg",
   },
@@ -30,7 +50,7 @@ const sdeProjects = [
       "A full-stack MERN voting application where users can create, share, and vote on polls. Features authentication, real-time results visualization with charts, and the ability to add custom poll options.",
     tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Chart.js"],
     github: "https://github.com/aryntmr/mern-voting-app",
-    gradient: "from-accent to-primary",
+    gradient: "from-secondary to-accent",
     icon: BarChart3,
     image: "/voting-app-preview.svg",
   },
@@ -40,7 +60,7 @@ const sdeProjects = [
       "A Discord clone built with the MERN stack (MongoDB, Express, React, Node.js) and Redux for state management. Features real-time chat functionality, user authentication via Firebase, and a modern Discord-inspired UI.",
     tech: ["MongoDB", "Express.js", "React", "Redux Toolkit", "Socket.io", "Node.js"],
     github: "https://github.com/aryntmr/discord-clone",
-    gradient: "from-primary via-accent to-secondary",
+    gradient: "from-accent to-primary",
     icon: Users,
     image: "/discord-clone-preview.svg",
   },
