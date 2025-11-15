@@ -1,7 +1,10 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon, BarChart3, Users, Briefcase, KanbanSquare } from "lucide-react"
+import { Github, Code2, Network, Brain, Eye, Sparkles, Video, MessageSquare, Target, ImageIcon, BarChart3, Users, Briefcase, KanbanSquare, Laptop } from "lucide-react"
+import { useState } from "react"
 
 const sdeProjects = [
   {
@@ -130,19 +133,56 @@ const mlProjects = [
 ]
 
 export function Projects() {
+  const [activeTab, setActiveTab] = useState<"sde" | "ml">("sde")
+
   return (
     <section id="projects" className="relative py-24 px-4 z-10">
-      <div className="max-w-7xl mx-auto space-y-24">
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Software Development Projects
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 font-light tracking-wider text-lg">
-            Full-stack systems engineering and distributed architectures
-          </p>
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          Projects
+        </h2>
+        <p className="text-center text-muted-foreground mb-8 font-light tracking-wider text-lg">
+          Explore my work across different domains
+        </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sdeProjects.map((project, index) => {
+        {/* Tab Buttons */}
+        <div className="flex justify-center gap-6 mb-12">
+          <Button
+            size="lg"
+            onClick={() => setActiveTab("sde")}
+            className={`px-8 py-6 text-lg font-bold tracking-wide transition-all flex items-center gap-3 ${
+              activeTab === "sde"
+                ? "bg-primary text-primary-foreground shadow-xl shadow-primary/60 scale-105"
+                : "bg-transparent border-2 border-primary/40 text-foreground hover:bg-primary/10 hover:border-primary/60"
+            }`}
+          >
+            <Laptop className="w-6 h-6" />
+            Software Development
+          </Button>
+          <Button
+            size="lg"
+            onClick={() => setActiveTab("ml")}
+            className={`px-8 py-6 text-lg font-bold tracking-wide transition-all flex items-center gap-3 ${
+              activeTab === "ml"
+                ? "bg-accent text-accent-foreground shadow-xl shadow-accent/60 scale-105"
+                : "bg-transparent border-2 border-accent/40 text-foreground hover:bg-accent/10 hover:border-accent/60"
+            }`}
+          >
+            <Brain className="w-6 h-6" />
+            Machine Learning
+          </Button>
+        </div>
+
+        {/* Software Development Projects */}
+        {activeTab === "sde" && (
+          <div className="space-y-6 animate-in fade-in duration-500">
+            <div className="text-center mb-8">
+              <p className="text-muted-foreground font-light tracking-wider text-base">
+                AI-powered Full-stack systems and Distributed architectures
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sdeProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
                 <a
@@ -194,17 +234,18 @@ export function Projects() {
             })}
           </div>
         </div>
+        )}
 
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-            Machine Learning Projects
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 font-light tracking-wider text-lg">
-            Advanced ML research, computer vision, and intelligent systems
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mlProjects.map((project, index) => {
+        {/* Machine Learning Projects */}
+        {activeTab === "ml" && (
+          <div className="space-y-6 animate-in fade-in duration-500">
+            <div className="text-center mb-8">
+              <p className="text-muted-foreground font-light tracking-wider text-base">
+                Advanced ML research, Computer vision, and Distributed ML training systems
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mlProjects.map((project, index) => {
               const IconComponent = project.icon
               return (
                 <a
@@ -263,8 +304,9 @@ export function Projects() {
                 </a>
               )
             })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )
